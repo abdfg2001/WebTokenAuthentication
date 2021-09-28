@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="form-outline">
+    <form method="post">
+        <button class="btn btn-primary btn-lg" type="submit" asp-action="Login"
+                asp-controller="Home">
+            Sign In
+        </button>
+        <button class="btn btn-primary btn-lg" type="submit" asp-action="Logout"
+                asp-controller="Home">
+            Sign Out
+        </button>
+        <button class="btn btn-primary btn-lg" type="submit" asp-action="SeeData"
+                asp-controller="Home">
+            See Data
+        </button>
+
+    </form>
+
+    <!-- Textarea 8 rows height -->
+    <textarea class="form-control" id="textAreaExample2" rows="8">@Html.Raw(@ViewBag.Data)</textarea>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
